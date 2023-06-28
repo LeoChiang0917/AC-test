@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="button-group">
+    <button type="button" class="btn btn-secondary" type="submit">回到首頁</button>
+    <div class="button-groups">
+     <button type="button" class="btn btn-secondary" type="submit">About</button>
+     <button type="button" class="btn btn-secondary" type="submit">Portfolio</button>
+     <button type="button" class="btn btn-secondary" type="submit">Contact</button>   
+    </div>
+    </div>
+
+    {{{ body }}}
+
+    <!-- include javascript files here -->
+  <script src="/javascripts/popper.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+  <script>
+
+  const buttons = document.querySelectorAll('.btn')
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const buttonText = button.innerText 
+      const url = `http://localhost:3000/${encodeURIComponent(buttonText)}`
+      if(buttonText==="回到首頁"){
+       const url =  'http://localhost:3000/'
+      }
+      window.location.href = url
+    })
+  })
+</script>
+</body>
+</html>

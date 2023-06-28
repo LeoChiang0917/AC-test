@@ -1,0 +1,12 @@
+.button-group{
+   display: flex; 
+   justify-content: space-between;
+   margin: 2rem;
+}
+
+.btn-secondary{
+    margin: 10px;
+}
+h1{
+    margin: 2rem;  
+}
